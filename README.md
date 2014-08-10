@@ -1,6 +1,6 @@
-Projection Mapping on Spatial Objects
-=====================================
+Projection Mapping on 3D Surfaces
+=================================
 
-Introductory workshop slides. [Click here to launch.](http://schprc.github.io/school-of-machines-2014-slides)
+Introductory workshop slides. [Click here to launch.](...)
 
 ...
