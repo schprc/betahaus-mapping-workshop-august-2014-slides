@@ -1,0 +1,128 @@
+.overlay {
+	position: absolute;
+	z-index: 100;
+	font-size: 16px;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	color: rgb(175, 175, 175);
+	font-weight: normal;
+	letter-spacing: 1px;
+	-webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    opacity: 0;
+}
+
+.slideshow-title {
+	left: 20px;
+	top: 20px;
+	line-height: 1.2;
+}
+
+.slideshow-byline {
+	top: 20px;
+	right: 20px;
+	text-align: right;
+}
+
+.slideshow-url {
+	bottom: 20px;
+	left: 20px;
+	opacity: 1;
+}
+
+.overlay a {
+	color: rgb(19, 218, 236);
+	text-decoration: none;
+}
+
+.overlay a:hover {
+	color: rgb(63, 225, 240);text-decoration: none;
+}
+
+.initially-hidden {
+	opacity: 0;
+}
+
+/*
+	Fade out animation classes
+*/
+
+.fadeout-ani {
+	-webkit-animation: fadeout-ani 0.5s; /* Chrome, Safari, Opera */
+    animation: fadeout-ani 0.5s;
+    opacity: 0;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeout-ani {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+/* Standard syntax */
+@keyframes fadeout-ani {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+/*
+	Fade in animation classes
+*/
+
+.fadein-ani {
+	-webkit-animation: fadein-ani 0.5s; /* Chrome, Safari, Opera */
+    animation: fadein-ani 0.5s;
+    opacity: 1;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein-ani {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes fadein-ani {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.reveal table {
+	margin: auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.reveal table th {
+	font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+ 	text-align: left;
+ 	padding: 0.2em 0.5em 0.2em 0.5em;
+ 	border-bottom: 1px solid; 
+}
+
+.reveal table tr:last-child td {
+	border-bottom: none; 
+}
+
+.list-number {
+	border: 5px solid rgb(19, 218, 236) !important;
+	margin: auto 0;
+	margin-right: 10px !important;
+    display: inline-block;
+    vertical-align: middle;
+	width: 70px;
+	height: 70px;
+	line-height: 70px !important;
+	border-radius: 40px;
+}
+
+.list-number:after {
+	content:"";
+	display: inline-block;
+	width: 1px solid transparent;
+	height: 100%;
+	vertical-align: middle;
+}

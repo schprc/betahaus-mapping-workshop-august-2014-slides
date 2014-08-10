@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Projection Mapping on Spatial Objects</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-state="hide-overlay">
+                    <h1>Projection Mapping on Spatial Objects</h1>
+                    <h2>Workshop / <a href="http://schoolofma.org/">School of Machines 2014</a></h2>
+                    <p>by <a href="http://rijnieks.lv">Krisjanis Rijnieks</a> and <a href="http://irina.spicaka.info">Irina Spicaka</a></p>
+                </section>
+
+                <section class="stack" data-state="show-overlay">
+                    <section>
+                        <h2>What we do and who we are?</h2>
+                        <p>
+                            For the past years we have been working with different projects that usually involve</p>
+                        <ul>
+                            <li>Graphic design</li>
+                            <li>Programming</li>
+                            <li>Projection mapping</li>
+                            <li>Electronics</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>.. as well as creating art installations and
+                        <ul>
+                            <li>VJ-ing</li>
+                            <li>Curating</li>
+                            <li>Organizing workshops</li>
+                            <li>And audiovisual events</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Irina Spicaka</h3>
+                        <p>
+                            Irina holds BA and MA in Visual Communication and Audiovisual Arts, has studied at the Art Academy of Latvia and Brera Academy in Milan, Italy. In her MA thesis, she was focusing on projection mapping, generative art and audiovisual composition. 
+                        </p>
+                        <p>
+                            Irina works as a graphic designer, curator as well as journalist in fields related to art, business and technology.
+                        </p> 
+                    </section>
+                    
+                    <section>
+                        <h3>Krisjanis Rijnieks</h3>
+                            <p>
+                                For the past few years, Krisjanis has been exploring different media, programming languages and uses of technology and finally has arrived to a point where he can see how to finally complete his MA studies. 
+                            </p>
+                            <p>
+                                He is a student at the New Media MA programme of the Aalto University of Art, Design and Architecture in Helsinki and also has a background in painting.
+                            </p>
+                    </section>
+                    <section>
+                        <h3>CodeBark and CC4AV</h3>
+                        <p>
+                            We run a small digital media studio <a href="http://www.codebark.com/">CodeBark</a> and are also developing the <a href="http://cc4av.info">CC4AV</a> (Creative Coding for Live Audio and Visuals) platform that works as a placeholder for workshops and other activities that we have done in Helsinki, Riga and Helsingor (<a href="http://clickfestival.dk/">Click Festival</a>) so far. 
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3> We are also collaborating with</h3>
+                        <ul>
+                            <li><a href="http://schoolofma.org/programs/">School of Machines</a></li>
+                            <li><a href="http://www.fablab-berlin.org/en/">Fab Lab Berlin</a></li>
+                            <li><a href="http://www.betahaus.com/berlin/education/">Betahaus Berlin</a></li>
+                        </ul>
+                    </section>
+                </section> <!-- /Who we are? -->
+
+                <section>
+                    <section>
+                        <h2>Our Projects</h2>
+                        <p>Latest projects that have been done by us in the past years.</p>
+                    </section>
+                    <section>
+                        <h3>Click Festival 2014</h3>
+                        <p>We did a Projection Mapping with the Raspberry Pi workshop within this years Click festival in Helsingor, Denmark. In collaboration with <a href="http://www.pixelache.ac">Pixelache</a> Helsinki.</p>
+                    </section>
+                    <section>
+                        <img src="img/click-01.jpg" alt="Click 1">
+                    </section>
+                    <section>
+                        <img src="img/click-02.jpg" alt="Click 2">
+                    </section>
+                    <section>
+                        <img src="img/click-03.jpg" alt="Click 3">
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/99651464?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>You and Now</h3>
+                        <p>Interactive projection mapping installation within the annual Glow Riga festival in Riga, Latvia, November 2013. In collaboration with <a href="http://mooz.lv">Mooz</a> agency</p>
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/99646304?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <img src="img/image1.png" alt="You and Now">
+                    </section>
+                    <section>
+                        <h3>Elves on Plane</h3>
+                        <p>Projection mapping on one of airBaltic airline planes for their annual Christmas campaingn. In collaboration with <a href="http://cube.lv">Cube</a> digital agency.</p>
+                    </section>
+                    <section>
+                        <iframe width="800" height="450" src="//www.youtube.com/embed/f-UinluQJpE?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>Metasphere</h3>
+                        <p>Projection mapping installation and audio-visual performance.</p>
+                    </section>
+                    <section>
+                        <img src="img/metasphere-01.jpg" alt="Metasphere 1">
+                    </section>
+                    <section>
+                        <img src="img/metasphere-02.jpg" alt="Metasphere 2">
+                    </section>
+                    <section>
+                        <img src="img/metasphere-03.jpg" alt="Metasphere 3">
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/69604996?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>Subatomic Particles</h3>
+                        <p>Audiovisual event during the White Night 2013 in Riga, Latvia.</p>
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/88567760?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>CC4AV Event Series</h3>
+                        <p>Creative Coding for Live Audio and Visuals event series with workshops and audiovisual performances.</p>
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/98737686?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>More</h3>
+                        <ul>
+                            <li><a href="https://vimeo.com/user25615586">Metasphere Vimeo channel</a></li>
+                            <li><a href="http://cc4av.info">Creative Coding for Live Audio and Visuals</a></li>
+                            <li><a href="https://vimeo.com/codebark">CodeBark Vimeo channel</a></li>
+                            <li><a href="http://codebark.com">CodeBark website</a></li>
+                        </ul>
+                    </section>
+
+                </section><!-- / Our Projects -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Projection Mapping</h2>
+                    </section>
+
+                    <section>
+                        <h3>Multiple Meaning of Projection Mapping</h3>
+                        <p>
+                            The term <b><i>mapping</i></b> highlights the role of space in the context of visual art as this term includes a function – real time projections adjusted to spatial objects.
+                        </p>
+    
+                        <small>
+                            The term <i><b>mapping</b></i> is also used in the computer sphere, for example, aligning peripherals with software parameters. It is possible to write on a personal computer’s screen due to the mapping of the keyboard with software functionality.
+                        </small>
+
+                        <p>
+                            <i><b>Projection mapping</b></i> or real time projections adjusted to spatial objects is a recently created set of electronic audio visual media methods which allows to surpass standard-size projections multiplying the picture, as well as to adjust the picture for different surfaces.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Why It Has Been Invented?</h3>
+                        <blockquote><small>
+                            The reason why the projection mapping technique was invented and developed further was a problem when there was no place for a screen at an event venue. The projector could also be put in a place somewhere in the room where the beam of light breaks partially on the ceiling, partially on one wall and plus on some other surface, thus being absolutely useless. There was no appropriate software at that time yet and specialists of the field worked out – if gamers had various advanced possibilities for using a room in 3D environment then VJs could use it dividing the room by walls and thus providing a more in-depth overview – getting beyond the classic rectangular screen.
+                            <br><br>
+                            In 2011 artists started using this method in their works and companies like Microsoft started experiments with it as a serious, progressive technology. Nowadays if you are skilled enough you can make your own app and use it in your work and share it with others.
+                         </small>
+                         </blockquote>
+                         <small>
+                            Read more in an article <a href="https://medium.com/@irina_spicaka/8e82ed34278e">Spatial Projections</a> by Irina Spicaka.
+                        </small>
+                    </section>
+
+                    <section>
+                        <h3>How it can be categorized</h3>
+                        <p>
+                            Projection mapping can be subdivided into two basic types:<br><br>
+                            <i><b>1) Projections meant for particular surfaces</b></i> <br>
+                            <i><b>2) Projections adjusted to the surfaces</b></i> <br><br>
+                            <small>By first subtype we usually understand installations, large scale projections on architecture, stage design and objects of art, as this subtype does not include in itself texturizing free spaces. The video material is prepared so that it can be shown in one go. 
+                            </small><br><br>
+                            <small>The second subtype is more experimental, suitable for real time performances and Vjing — the process of texturizing surfaces includes remixing samples, cutting out and adjusting fields to various surfaces.</small>
+                        </p>
+                    </section>
+                    <section>
+                            <blockquote><small>
+                                Back to the first type it should be noted that when making projections for certain surfaces, the work is first done in 3D and animation software — classical animation methods are applied, such as lightning and special effects, narrative. The most classic example is projection mapping on architectural facades used at light festivals. The buildings are modeled first (or ready-made, modeled prototypes of them are used) and the story is created taking into consideration the design of the particular building. The process is connected with very accurate work where each mistake (let it be no more than a millimeter) both, in animation process or in the projection on the particular surface can be seen as a bias which looks like a defect. Therefore this process cannot be associated with real time performance.
+                            </small>
+                            </blockquote>
+                            <small>
+                                 Read more in an article <a href="https://medium.com/@irina_spicaka/8e82ed34278e">Spatial Projections</a> by Irina Spicaka.
+                            </small>
+                    </section>
+                </section>  <!-- /Projection Mapping -->
+                
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Where projection mapping can be used?</h2>
+                    </section>
+                    <section>
+                        <ul>
+                            <li><a href="https://vimeo.com/10089534">Stage Design </a> involved in Vj-ing (inluding <a href="https://vimeo.com/62934464">Light Mapping </a> ) </li>
+                            <li><a href="https://vimeo.com/23914078">Audiovisual Performance</a></li> 
+                            <li><a href="https://vimeo.com/32811205">Art Installation</a></li>
+                            <li><a href="https://vimeo.com/34025760"> Scenography </a> and <a href="https://www.youtube.com/watch?v=lX6JcybgDFo"> Motion Art </a> </li>
+                            <li><a href="https://vimeo.com/48284012"> Large Scale Projections </a> on <a href="https://vimeo.com/18888136"> Architecture </a></li>
+                            <li> <a href="https://www.youtube.com/watch?v=LlTtj0-FG80"> Window Display </a> and <a href="https://vimeo.com/82705937">Store Design</a></li>
+                        </ul>
+                    </section> 
+                </section> <!-- /Where it* can be used? -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Tools</h2>
+                        <p>Decent software for creating media content and projection mapping.</p>
+                    </section>
+                    <section>
+                        <h3>3D Modeling tools</h3>
+                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://www.blender.org/">Blender</a></td>
+                                    <td>Free and open source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.maxon.net/products/cinema-4d-studio/who-should-use-it.html">Cinema 4D</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.autodesk.com/products/autodesk-3ds-max/overview">Max3D</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.autodesk.in/products/autodesk-maya/overview">Maya</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Projection Mapping</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://www.madmapper.com/">MadMapper</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.modul8.ch">Model8</a> and <a href="http://resolume.com/">Resolume</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.derivative.ca/">TouchDesigner</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://hv-a.com/lpmt/?page_id=2">LPMT</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://keystonep5.sourceforge.net/">Keystone</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://cycling74.com/project/vpt-7-videoprojectiontool/">VPT7</a></td>
+                                    <td>Free</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Visual programming languages</h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://quartzcomposer.com/">Quartz Composer</a></td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://cycling74.com/products/max/">Max/MSP Jitter</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://vuo.org">Vuo</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.derivative.ca/">TouchDesigner</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Text based programming languages</h3>
+                        <table>
+                            <tr>
+                                <td><a href="http://www.processing.org/">Processing</a></td>
+                                <td>Free and open-source</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://openframeworks.cc/">openFrameworks</a></td>
+                                <td>Free and open-source</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://libcinder.org/">Cinder</a></td>
+                                <td>Free and open-source</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Game Engines</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://unity3d.com/">Unity 3D</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.unrealengine.com">Unreal Game Engine</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://wiki.blender.org/index.php/Doc:2.6/Manual/Game_Engine">Blender Game Engine</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Frame-based animation</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.openshot.org">Open Shot Video Editor</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.pencil-animation.org">Pencil</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Protocols</h3>
+                        <p>Software that can bridge visual output from one software to another in real-time.</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://syphon.v002.info">Syphon</a></td>
+                                    <td>Free, open-source and Mac only</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://spout.zeal.co">Spout</a></td>
+                                    <td>Free, Windows only</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section> <!-- /Tools -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Tips and Tricks</h2>
+                        <p>Best practices from experience.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">1</span> Test it first</h3>
+                        <p>Before becomming too artistic, test if the technology works as intended.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">2</span> Backup working versions</h3>
+                        <p>If your solution works, save it somewhere safe so when you continue to add changes, you can always switch back to the version that actually did work.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">3</span> Know your surface</h3>
+                        <p>The more precise you will know the projection surface, the better. Especially when mapping outdoors on buildings.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">4</span> Sketching helps</h3>
+                        <p>Make sketches and storyboards before doing it for real. Going through the process that way initially will help you overcome difficulties before you encounter them in the production process.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">5</span> Always have your own adaptors</h3>
+                        <p>And cables. It might save you as well as others. Always have an extra cable and adaptor. It can make you the hero of the day. Or night.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">6</span> No screensavers</h3>
+                        <p>Switch off screensavers and sleep for both, power and battery modes, on your laptop.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">7</span> Cold corners</h3>
+                        <p>Disable hot corners or Exposé as it ruins the magic when a spectator notices what operating system are you using or that you have the same mess on the desktop as you have.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">8</span> No instant messaging</h3>
+                        <p>Disable Skype or any other kind of messenger or service that tends to irritate you when least necessary.</p>    
+                    </section>
+                </section> <!-- /Tips and Tricks -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Workshop</h2>
+                        <p>What do we do now?</p>
+                    </section>
+                    <section>
+                        <h3>Summary</h3>
+                        <p>We are going to use our computers and available projectors to projection map a surface that has been prepared for this workshop.</p>
+                    </section>
+                    <section>
+                        <h3>A surface?</h3>
+                        <p>The surface for projection mapping has it's story on it's own. It has been created in Blender and then made real with the help of a lasercutter.</p>
+                    </section>
+                    <section>
+                        <h3>How is this going to work?</h3>
+                        <ol>
+                            <li>Split into groups.</li>
+                            <li>Download and install software.</li>
+                            <li>Create image or animation source.</li>
+                            <li>Have fun with projection mapping!</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Software</h3>
+                        <p>We are going to use <a href="http://www.madmapper.com">MadMapper</a> during this workshop. Demo version is free, but you won't be able to save your projects with it.</p>
+                        <p>Use <a href="http://hv-a.com/lpmt/">LPMT</a> or <a href="http://hcgilje.wordpress.com/vpt/">VPT</a> instead if you like free software.</p>
+                    </section>
+                </section> <!-- /Workshop: Projection Mapping on Spatial Objects -->
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>MadMapper Cheatsheet</h2>
+                        <p>A couple of images that have been made to make the beginning of your mad mapping life easier.</p>
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-1.jpg" alt="MadMapper Interface 1">
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-2.jpg" alt="MadMapper Interface 2">
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-3.jpg" alt="MadMapper Interface 3">
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-4.jpg" alt="MadMapper Interface 4">
+                    </section>
+                </section>
+            </div> <!-- /.slides -->
+        </div> <!-- /.reveal -->
+
+        <div class="overlay slideshow-title">
+            Projection Mapping on Spatial Objects
+        </div>
+
+        <div class="overlay slideshow-byline">
+            by <a href="http://rijnieks.lv" target="_blank">Krisjanis Rijnieks</a> and <a href="http://irina.spicaka.info" target="_blank">Irina Spicaka</a>
+        </div>
+
+        <div class="overlay slideshow-url">
+            Slideshow URL: 
+            <a href="http://ej.uz/machines" title="School of Machines - Projection Mapping on Spatial Objects">http://ej.uz/machines</a>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+            Reveal.addEventListener( 'ready', function( event ) {
+                if ( event.indexh == 0 ) {
+                    removeOverlayAnimationClasses();
+                    $('.overlay').addClass('initially-hidden');
+                    $('.slideshow-url').removeClass('initially-hidden');
+                } else {
+                    showOverlay();
+                }
+            } );
+
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                if ( event.indexh == 0 ) {
+                    hideOverlay();
+                } else {
+                    if ( !$('overlay').hasClass('fadein-ani') ) {
+                        showOverlay();
+                    }
+                }
+            } );
+
+            var showOverlay = function() {
+                removeOverlayAnimationClasses();
+                $('.overlay').addClass('fadein-ani');
+                $('.slideshow-url').removeClass('fadein-ani');
+            }      
+
+            var hideOverlay = function() {
+                removeOverlayAnimationClasses();
+                $('.overlay').addClass('fadeout-ani');
+                $('.slideshow-url').removeClass('fadeout-ani');
+            }
+
+            var removeOverlayAnimationClasses = function() {
+                if ( $('.overlay').hasClass('fadein-ani') ) {
+                    $('.overlay').removeClass('fadein-ani');
+                }
+
+                if ( $('.overlay').hasClass('hadeout-ani') ) {
+                    $('.overlay').removeClass('fadein-ani');
+                }
+
+                if ( $('.overlay').hasClass('initially-hidden') ) {
+                    $('.overlay').removeClass('initially-hidden');
+                }
+            }
+        </script>
+    </body>
+</html>
