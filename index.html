@@ -681,6 +681,51 @@
                     </section>
                 </section>
 
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Exporting for assembly</h2>
+                        <p>To make a 3D object out of a 3D model we have to export it as 2D surfaces</p>
+                    </section>
+                    <section>
+                        <h3>Install Export Paper Model plugin</h3>
+                        <ol>
+                            <li>Download Export Paper Model plugin for Blender:<br>
+                            <a href="https://github.com/addam/Export-Paper-Model-from-Blender">github.com/addam/Export-Paper-Model-from-Blender</a></li>
+                            <li>Open Blender User Preferences by hitting <u>Ctrl + Alt + U</u> while in Blender</li>
+                            <li>Go to <u>Addons tab</u></li>
+                            <li>Click on <u>Install from File</u> button and select the downloaded io_export_paper_model.py file</li>
+                            <li>Enable the plugin by checking the box near the plugin name in the Addons section</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Prepare the Model for Exporting</h3>
+                        <ol>
+                            <li>Make sure that you use the correct units (metric) in Scene properties</li>
+                            <li>Make sure that the object has scale 1 along all axes</li>
+                            <li>If not, go to <u>Object › Apply › Scale</u> to make the current size of the object to be the default scale of it</li>
+                            <li>Triangulate all faces by entering edit mode (hit Tab), selectign all faces (hit A) and going to <u>Mesh › Faces › Triangulate Faces</u> or hitting <u>Ctrl + T</u></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Export Model</h3>
+                        <ol>
+                            <li>Select the object</li>
+                            <li>Go to <u>File › Export › Paper Model (.svg)</u></li>
+                            <li>Adjust properties (detailed explanation in next slide)</li>
+                            <li>Chose destination folder and file name</li>
+                            <li>Hit the <u>Export Paper Model</u> button</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Export Paper Model properties</h3>
+                        <ul>
+                            <li>Page Size<br><small>Page size that will be used for laying out the unwrapped faces of the model. It should be bigger than the final drawing or the output will be scaled down to fit the page.</small></li>
+                            <li>Unfolder DPI<br><small>Dots Per Inch or resolution that will be used by the plugin to generate the drawing. Set it to 72 as it is the default screen resolution.</small></li>
+                            <li>Other properties<br><small>You can skip other properties as they depend on individual taste. Experiment with them and adjust if needed.</small></li>
+                        </ul>
+                    </section>
+                </section>
+
                 <!--
                 <section class="stack">
                     <section data-background-color="rgba( 22, 152, 213, 0.6 )">
