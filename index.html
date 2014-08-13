@@ -679,6 +679,15 @@
                      <section>
                         <img src="img/Blender-Manual-Modeling-Object8.jpg" alt="Modeling Object 8">
                     </section>
+                    <section>
+                        <h3>More about Blender</h3>
+                        <p>A couple of links to websites that can help you get confortable with Blender</p>
+                        <ul>
+                            <li><a href="http://www.blender.org/support/tutorials/">blender.org</a><br><small>Blender main site tutorials. All the basics are there.</small></li>
+                            <li><a href="http://www.blendtuts.com">blendtuts.com</a><br><small>All kinds of Blender tutorials from the Blender user community.</small></li>
+                            <li><a href="http://youtube.com">YouTube</a><br><small>A lot of questions about Blender can be answered by searching in YouTube.</small></li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section class="stack">
@@ -692,9 +701,9 @@
                             <li>Download Export Paper Model plugin for Blender:<br>
                             <a href="https://github.com/addam/Export-Paper-Model-from-Blender">github.com/addam/Export-Paper-Model-from-Blender</a></li>
                             <li>Open Blender User Preferences by hitting <u>Ctrl + Alt + U</u> while in Blender</li>
-                            <li>Go to <u>Addons tab</u></li>
+                            <li>Go to <u>Addons</u> tab</li>
                             <li>Click on <u>Install from File</u> button and select the downloaded io_export_paper_model.py file</li>
-                            <li>Enable the plugin by checking the box near the plugin name in the Addons section</li>
+                            <li>Enable the plugin by checking the box next to the plugin name in the Addons section</li>
                         </ol>
                     </section>
                     <section>
@@ -703,11 +712,11 @@
                             <li>Make sure that you use the correct units (metric) in Scene properties</li>
                             <li>Make sure that the object has scale 1 along all axes</li>
                             <li>If not, go to <u>Object › Apply › Scale</u> to make the current size of the object to be the default scale of it</li>
-                            <li>Triangulate all faces by entering edit mode (hit Tab), selectign all faces (hit A) and going to <u>Mesh › Faces › Triangulate Faces</u> or hitting <u>Ctrl + T</u></li>
+                            <li>Triangulate all faces by entering edit mode (hit Tab), selecting all faces (hit A) and going to <u>Mesh › Faces › Triangulate Faces</u> or hitting <u>Ctrl + T</u></li>
                         </ol>
                     </section>
                     <section>
-                        <h3>Export Model</h3>
+                        <h3>Export Paper Model</h3>
                         <ol>
                             <li>Select the object</li>
                             <li>Go to <u>File › Export › Paper Model (.svg)</u></li>
@@ -717,14 +726,24 @@
                         </ol>
                     </section>
                     <section>
-                        <h3>Export Paper Model properties</h3>
+                        <h3>Export Paper Model Properties</h3>
                         <ul>
                             <li>Scale<br><small>For precise output use scale 1:1 by entering 1 in the field. If you will attempt to export a cube that is 20cm wide, high and deep, also the exported faces will be 20cm wide and high.</small></li>
                             <li>Page Size<br><small>Page size that will be used for laying out the unwrapped faces of the model. It should be bigger than the final drawing or the output will be scaled down to fit the page.</small></li>
                             <li>Unfolder DPI<br><small>Dots Per Inch or resolution that will be used by the plugin to generate the drawing. Set it to 72 as it is the default screen resolution.</small></li>
-                            <li>Other properties<br><small>You can skip other properties as they depend on individual taste. Experiment with them and adjust if needed.</small></li>
+                            <li>Other properties<br><small>You can skip other properties as they depend on subjective taste. Experiment with them and adjust if needed.</small></li>
                         </ul>
                     </section>
+                    <!--
+                    <section>
+                        <h3>Adjust Output for Digital Fabrication</h3>
+                        <p>As we are going to use a laser cutter to cut out parts of the objects, we have to manually prepare the 2D drawings so the laser cutter software can understand that.</p>
+                        <ul>
+                            <li>We are going to use <a href="http://www.inkscape.org">Inkscape</a></li>
+                            <li>We are going to separate faces</li>
+                        </ul>
+                    </section>
+                    -->
                 </section>
 
                 <!--
